@@ -12,7 +12,7 @@ def finde_primzahlen(limit, dateiname):
             testTeiler += 1
 
         if primeNumberTrue == True:
-            with open(dateiname, "a") as datei_object:
+            with open(dateiname, "w") as datei_object:
                 print(aktuelleZahl, file=datei_object)
         
         aktuelleZahl += 1
