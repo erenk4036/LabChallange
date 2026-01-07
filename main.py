@@ -1,6 +1,7 @@
 maxNumber = 250
 aktuelleZahl = 2
 primeNumberTrue = False
+dateiname = "primeNumber.txt"
 
 while aktuelleZahl <= maxNumber:
     primeNumberTrue = True
@@ -14,7 +15,8 @@ while aktuelleZahl <= maxNumber:
         testTeiler += 1
 
     if primeNumberTrue == True:
-        print(aktuelleZahl)
+        with open(dateiname, "a") as datei_object:
+            print(aktuelleZahl, file=datei_object)
     
     aktuelleZahl += 1
 
